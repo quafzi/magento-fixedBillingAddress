@@ -1,2 +1,4 @@
 app/etc/modules/Quafzi_FixedBillingAddress.xml app/etc/modules/Quafzi_FixedBillingAddress.xml
 app/code/community/Quafzi/FixedBillingAddress app/code/community/Quafzi/FixedBillingAddress
+app/design/frontend/base/default/layout/quafzi_fixedbillingaddress.xml app/design/frontend/base/default/layout/quafzi_fixedbillingaddress.xml
+app/design/frontend/base/default/template/quafzi_fixedbillingaddress/ app/design/frontend/base/default/template/quafzi_fixedbillingaddress/

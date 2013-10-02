@@ -27,6 +27,24 @@
             </customer>
         </models>
     </global>
+    <frontend>
+        <layout>
+            <updates>
+                <quafzi_fixedbillingaddress module="Quafzi_FixedBillingAddress">
+                    <file>quafzi_fixedbillingaddress.xml</file>
+                </quafzi_fixedbillingaddress>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <Quafzi_FixedBillingAddress>
+                    <files>
+                        <default>Quafzi_FixedBillingAddress.csv</default>
+                    </files>
+                </Quafzi_FixedBillingAddress>
+            </modules>
+        </translate>
+    </frontend>
     <default>
         <customer>
             <address>

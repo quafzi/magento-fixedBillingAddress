@@ -14,6 +14,18 @@
         </Quafzi_FixedBillingAddress>
     </modules>
     <global>
+        <blocks>
+            <checkout>
+                <rewrite>
+                    <onepage_billing>Quafzi_FixedBillingAddress_Block_Checkout_Onepage_Billing</onepage_billing>
+                </rewrite>
+            </checkout>
+            <customer>
+                <rewrite>
+                    <address_edit>Quafzi_FixedBillingAddress_Block_Customer_Address_Edit</address_edit>
+                </rewrite>
+            </customer>
+        </blocks>
         <helpers>
             <quafzi_fixedbillingaddress>
                 <class>Quafzi_FixedBillingAddress_Helper</class>
@@ -35,6 +47,8 @@
                 </quafzi_fixedbillingaddress>
             </updates>
         </layout>
+    </frontend>
+    <adminhtml>
         <translate>
             <modules>
                 <Quafzi_FixedBillingAddress>
@@ -44,7 +58,7 @@
                 </Quafzi_FixedBillingAddress>
             </modules>
         </translate>
-    </frontend>
+    </adminhtml>
     <default>
         <customer>
             <address>

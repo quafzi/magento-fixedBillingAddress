@@ -21,4 +21,9 @@
             <action method="setTemplate"><template>quafzi_fixedbillingaddress/customer/address/book.phtml</template></action>
         </reference>
     </customer_address_index>
+    <customer_account_index translate="label">
+        <reference name="customer_account_dashboard_address">
+            <action method="setTemplate"><template>quafzi_fixedbillingaddress/customer/account/dashboard/address.phtml</template></action>
+        </reference>
+    </customer_account_index>
 </layout>

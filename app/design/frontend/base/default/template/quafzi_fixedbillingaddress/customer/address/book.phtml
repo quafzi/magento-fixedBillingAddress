@@ -36,9 +36,11 @@
                 <address>
                     <?php echo $this->getAddressHtml(Mage::getSingleton('customer/session')->getCustomer()->getAddressById($_pAddsses)) ?>
                 </address>
-                <?php /* COMMENTING THIS IS THE ONLY CHANGE OF THIS FILE
+<?php /* THIS IS THE ONLY CHANGE OF THIS FILE */ ?>
+                <?php if (false === Mage::helper('quafzi_fixedbillingaddress/data')->isAddressFixed()): ?>
                 <p><a href="<?php echo $this->getAddressEditUrl(Mage::getSingleton('customer/session')->getCustomer()->getAddressById($_pAddsses)) ?>"><?php echo $this->__('Change Billing Address') ?></a></p>
-                ******** END OF CHANGE */ ?>
+                <?php endif; ?>
+<?php /* END OF CHANGE */ ?>
            </li>
         <?php else: ?>
             <li class="item">

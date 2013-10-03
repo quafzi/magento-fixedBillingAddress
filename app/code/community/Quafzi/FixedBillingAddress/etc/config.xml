@@ -51,6 +51,15 @@
             </updates>
         </layout>
         <events>
+            <controller_action_predispatch_customer_address_formPost>
+                <observers>
+                    <ensureFixedBillingAddress>
+                        <type>model</type>
+                        <class>quafzi_fixedbillingaddress/observer</class>
+                        <method>controller_action_predispatch_customer_address_formPost</method>
+                    </ensureFixedBillingAddress>
+                </observers>
+            </controller_action_predispatch_customer_address_formPost>
             <controller_action_predispatch_checkout_onepage_saveBilling>
                 <observers>
                     <ensureFixedBillingAddress>

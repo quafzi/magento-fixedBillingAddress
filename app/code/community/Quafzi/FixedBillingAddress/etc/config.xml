@@ -32,6 +32,9 @@
             </quafzi_fixedbillingaddress>
         </helpers>
         <models>
+            <quafzi_fixedbillingaddress>
+                <class>Quafzi_FixedBillingAddress_Model</class>
+            </quafzi_fixedbillingaddress>
             <customer>
                 <rewrite>
                     <address>Quafzi_FixedBillingAddress_Model_Customer_Address</address>
@@ -47,6 +50,17 @@
                 </quafzi_fixedbillingaddress>
             </updates>
         </layout>
+        <events>
+            <controller_action_predispatch_checkout_onepage_saveBilling>
+                <observers>
+                    <ensureFixedBillingAddress>
+                        <type>model</type>
+                        <class>quafzi_fixedbillingaddress/observer</class>
+                        <method>controller_action_predispatch_checkout_onepage_saveBilling</method>
+                    </ensureFixedBillingAddress>
+                </observers>
+            </controller_action_predispatch_checkout_onepage_saveBilling>
+        </events>
     </frontend>
     <adminhtml>
         <translate>

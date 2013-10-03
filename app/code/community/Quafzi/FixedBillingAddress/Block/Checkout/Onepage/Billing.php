@@ -4,7 +4,9 @@ class Quafzi_FixedBillingAddress_Block_Checkout_Onepage_Billing
 {
     public function getAddressesHtmlSelect($type)
     {
-        if ('billing' !== $type) {
+        if ('billing' !== $type
+            || false === Mage::helper('quafzi_fixedbillingaddress/data')->isAddressFixed()
+        ) {
             return parent::getAddressesHtmlSelect($type);
         }
         $selectId = 'billing-address-select';

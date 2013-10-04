@@ -11,8 +11,29 @@ class Quafzi_FixedBillingAddress_Helper_Data
     public function isAddressFixed()
     {
         $isAdmin = Mage::getSingleton('admin/session')->isLoggedIn();
+        $hasBillingAddress = $this->_hasBillingAddress();
         $isChangeable = (bool)(int)Mage::getStoreConfig('customer/address/change_billing_allowed');
 
-        return (false === $isAdmin && false === $isChangeable);
+        return (false === $isAdmin && false === $isChangeable && true === $hasBillingAddress);
+    }
+
+    /**
+     * if customer already has a billing address
+     *
+     * @return bool
+     */
+    protected function _hasBillingAddress()
+    {
+        return (bool) $this->_getCustomer()->getDefaultBilling();
+    }
+
+    /**
+     * get current user
+     *
+     * @return Mage_Customer_Model_Customer
+     */
+    protected function _getCustomer()
+    {
+        return Mage::getSingleton('customer/session')->getCustomer();
     }
 }

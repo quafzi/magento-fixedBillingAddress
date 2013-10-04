@@ -36,7 +36,6 @@ class Quafzi_FixedBillingAddress_Model_Observer
             // trigger create instead of change
             $request->setParam('id', null);
         }
-
     }
 
     /**

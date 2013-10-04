@@ -16,6 +16,16 @@
  */
 -->
 <layout version="0.1.0">
+    <checkout_onepage_index>
+        <reference name="checkout.progress">
+            <action method="setTemplate"><template>quafzi_fixedbillingaddress/checkout/onepage/progress.phtml</template></action>
+        </reference>
+    </checkout_onepage_index>
+    <checkout_onepage_progress>
+        <reference name="root">
+            <action method="setTemplate"><template>quafzi_fixedbillingaddress/checkout/onepage/progress.phtml</template></action>
+        </reference>
+    </checkout_onepage_progress>
     <customer_address_index>
         <reference name="address_book">
             <action method="setTemplate"><template>quafzi_fixedbillingaddress/customer/address/book.phtml</template></action>

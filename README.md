@@ -5,7 +5,11 @@ Therefor edit links are hidden, and billing address drop-down is replaced by a s
 
 ## Installation
 
-Install using modman
+Require it in your `composer.json`
+
+    composer require "quafzi/fixed-billing-address" "dev-master"
+
+or install using modman
 
     modman clone git@github.com:quafzi/magento-fixedBillingAddress.git
 

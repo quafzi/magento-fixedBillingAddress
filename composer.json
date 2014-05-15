@@ -1,0 +1,14 @@
+{
+    "name": "quafzi/fixed-billing-address",
+    "type": "magento-module",
+    "description": "This Magento extension denies logged-in customers to change their billing address",
+    "authors": [
+        {
+            "name": "Thomas Birke",
+            "email": "tbirke@netextreme.de"
+        }
+    ],
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
